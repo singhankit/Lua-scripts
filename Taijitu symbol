@@ -1,0 +1,14 @@
+//Taijitu Symbol
+
+layer=active.proxy.layerByName("0")
+doc=active.document()
+bobj=Builder(doc)
+
+c1=Circle(Coord(0,0),100,layer)
+c2=Arc(Coord(0,50),50,math.rad(270),math.rad(450),layer)
+c3=Arc(Coord(0,-50),50,math.rad(90),math.rad(270),layer)
+
+c4=Circle(Coord(0,50),25,layer)
+c5=Circle(Coord(0,-50),25,layer)
+
+bobj:append(c1):append(c2):append(c3):append(c4):append(c5):execute()
