@@ -1,0 +1,12 @@
+layer=active.proxy.layerByName("0")
+doc=active.document()
+bobj=Builder(doc)
+
+ellip2=Ellipse(Coord(0,0),Coord(0,170), 150, math.rad(0), math.rad(360), layer);
+for i=150,170 do
+for j=80,150 do
+ellip1=Ellipse(Coord(0,0),Coord(0,i), j, math.rad(0), math.rad(360), layer);
+bobj:append(ellip1)
+end end
+bobj:append(ellip2) 
+bobj:execute()
