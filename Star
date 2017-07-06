@@ -1,0 +1,24 @@
+layer=active.proxy.layerByName("0")
+doc=active.document()
+bobj=Builder(doc)
+
+--function of line
+
+function lline(x,y,xx,yy)
+
+line1 = Line(Coord(x,y),Coord(xx,yy),layer)
+
+bobj:append(line1):execute()
+end
+
+
+lline(0,-100,25,0)
+lline(25,0,125,0)
+lline(125,0,40,50)
+lline(40,50,105,150)
+lline(105,150,0,75)
+lline(0,75,-105,150)
+lline(-105,150,-40,50)
+lline(-40,50,-125,0)
+lline(-125,0,-25,0)
+lline(-25,0,0,-100)
